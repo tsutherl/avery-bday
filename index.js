@@ -86,32 +86,28 @@ AudioVisualizer.prototype.initialize = function () {
 //create the bars required to show the visualization
 AudioVisualizer.prototype.createBars = function () {
 
+    //WTF isn't this working!
+    // var loader = new THREE.FontLoader();
 
+    // loader.load( 'fonts/helvetiker_bold.typeface.js', function ( font ) {
+    //     console.log('inside')
+    //     var material = new THREE.MeshPhongMaterial({
+    //         color: 'white'
+    //     });
+    //     var textGeom = new THREE.TextGeometry( 'Hello, World!', {
+    //         font: font
+    //     });
 
-    var loader = new THREE.FontLoader();
+    //     this.flatBars[0] = new THREE.Mesh( textGeom, material );
 
-    loader.load( 'fonts/helvetiker_bold.typeface.js', function ( font ) {
-        console.log('inside')
-        var material = new THREE.MeshPhongMaterial({
-            color: 'white'
-        });
-        var textGeom = new THREE.TextGeometry( 'Hello, World!', {
-            font: font
-        });
-
-        this.flatBars[0] = new THREE.Mesh( textGeom, material );
-
-        textGeom.computeBoundingBox();
-        this.flatBars[0] = textGeom.boundingBox.max.x - textGeom.boundingBox.min.x;
+    //     textGeom.computeBoundingBox();
+    //     this.flatBars[0] = textGeom.boundingBox.max.x - textGeom.boundingBox.min.x;
         
-        textMesh.position.set( -0.5 * textWidth, 100, 0 );
-        scene.add(this.flatBars[0]  );
+    //     textMesh.position.set( -0.5 * textWidth, 100, 0 );
+    //     scene.add(this.flatBars[0]  );
 
-    } )
+    // } )
      
-    
-
-
     //iterate and create bars
     for (var i = 0; i < this.numberOfBars; i++) {
 
